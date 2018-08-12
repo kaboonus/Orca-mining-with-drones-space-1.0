@@ -429,9 +429,9 @@ void ClickMenuEntryOnPatternMenuRoot(IUIElement MenuRoot, string MenuEntryRegexP
     {
         // Using the API explorer when we click on the top menu we get another menu that has more options
         // So skip the MenuRoot and click on Submenu
-       var subMenu = Sanderling?.MemoryMeasurementParsed?.Value?.Menu?.Skip(1).First();
-      //var subMenu = Sanderling?.MemoryMeasurementParsed?.Value?.Menu?.FirstOrDefault();//skipping made error on align command
-        var subMenuEntry = subMenu?.EntryFirstMatchingRegexPattern(SubMenuEntryRegexPattern, RegexOptions.IgnoreCase);
+      // var subMenu = Sanderling?.MemoryMeasurementParsed?.Value?.Menu?.Skip(1).First();
+      var subMenu = Sanderling?.MemoryMeasurementParsed?.Value?.Menu?.ElementAtOrDefault(1);
+	  var subMenuEntry = subMenu?.EntryFirstMatchingRegexPattern(SubMenuEntryRegexPattern, RegexOptions.IgnoreCase);
 	Host.Log("initiate warp to '" + MenuEntryRegexPattern + "'");
 	   Sanderling.MouseClickLeft(subMenuEntry);
     }
