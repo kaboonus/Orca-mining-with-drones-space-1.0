@@ -29,7 +29,7 @@ using Parse = Sanderling.Parse;
 string OverviewPreset = null;
 
 //mining range (in metric)
-int MiningRange = 13000;
+int MiningRange = 16000;
 // drones
 int DroneNumber = 5;
 
@@ -40,10 +40,10 @@ string FolderBeltsMining = "asteroid belts";
 string UnloadDestContainerName = "Item Hangar";
 
 //	Bookmark of location where ore should be unloaded.
-string UnloadBookmark = "home";
+string UnloadBookmark = "Home";
 
 //	Percentage of fill level at which to enter the offload process.
-var EnterOffloadOreContainerFillPercent = 85;
+var EnterOffloadOreContainerFillPercent = 98;
 
 //	Bot will switch mining site when rats are visible and shield hitpoints are lower than this value.
 var SwitchMiningSiteHitpointThresholdPercent = 95;
@@ -272,7 +272,7 @@ Func<object> InBeltMineStep()
 		if (!(0 < DronesInSpaceCount))
         DroneLaunch();
 		//MineTarget();
-		 Sanderling.KeyboardPress(VirtualKeyCode.VK_F);
+	//	 Sanderling.KeyboardPress(VirtualKeyCode.VK_F);
 		if (droneInLocalSpaceIdle && (Measurement?.Target?.Length > 0))
 		{		
 			Host.Log("drones idle");
