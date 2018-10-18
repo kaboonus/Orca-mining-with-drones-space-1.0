@@ -1,4 +1,4 @@
-/* Vers alpha:ORCA DRONES: SPACE 1.0-0.9.This bot mines ore only with drones. It using a bookmark folder for chosen belts and take them in order. It unload the ore in "home" station.
+/* Vers alpha:ORCA DRONES: SPACE 1.0-0.9.This bot mines ore only with drones. It using asteroid belts system and take them in order. It unload the ore in "home" station.
 Before running this bot, prepare the EVE online client as follows:
 + Set the UI language to english.
 + Move your mining ship to a solar system which has asteroid belts and at least one station in which you can dock.
@@ -8,8 +8,7 @@ Before running this bot, prepare the EVE online client as follows:
 + Enable the info panel 'System info'. The bot needs this to find asteroid belts and stations.
 + Arrange windows to not occlude ship modules or info panels.
 + Create your own bookmark "home"
-+ Create your own Folder for mining Belts
- ( for now is named asteroid belts. If you change him, change also in script settings)
+ It use the only  asteroid belts from system core default . !!!!!!!!!!!!!!!!
 + Only if you change the folder name for bookmarks, create your own bookmarks for mining and put them INSIDE of folder
 Preparations of bot:
 + fill/change the MiningRange
@@ -34,7 +33,7 @@ int MiningRange = 16000;
 int DroneNumber = 5;
 
 //the name of folder of bookmarks for mining
-string FolderBeltsMining = "asteroid belts";
+string FolderBeltsMining = "mining";
 
 //	Name of the container to unload to as shown in inventory.
 string UnloadDestContainerName = "Item Hangar";
