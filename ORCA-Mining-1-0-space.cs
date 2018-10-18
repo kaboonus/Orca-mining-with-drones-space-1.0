@@ -33,7 +33,7 @@ int MiningRange = 16000;
 int DroneNumber = 5;
 
 //the name of folder of bookmarks for mining
-string FolderBeltsMining = "mining";
+string FolderBeltsMining = "asteroid belts";
 
 //	Name of the container to unload to as shown in inventory.
 string UnloadDestContainerName = "Item Hangar";
